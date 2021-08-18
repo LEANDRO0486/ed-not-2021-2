@@ -54999,6 +54999,4 @@ nomes = [
 	'JUCELIR',
 	'JUCELIS',
 	'JUCELITA',
-	'JU
-
-	
+	'JU	

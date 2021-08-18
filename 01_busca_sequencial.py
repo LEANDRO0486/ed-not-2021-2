@@ -6,7 +6,7 @@
 #a busca para quando o valor de busca é encontrada ou quando
 #a lista é totalmente percorrida, sem encontrar o valor de busca.
 from time import time
-from data.lista_nomes import nomes 
+from data.listas_nomes import nomes 
 
 def busca_sequencial(lista, valor_busca):
     """
@@ -109,6 +109,7 @@ busca = 'Orkutilson'
 print(f"posição de FAUSTO: {busca_sequencial(nomes, 'FAUSTO')}")
 print(f"posição de ZULEICA: {busca_sequencial(nomes, 'ZULEICA')}")
 print(f"posição de {busca.upper()}: {busca_sequencial(nomes, busca.upper())}")
+
 
 
 
