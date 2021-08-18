@@ -35,3 +35,4 @@ print('------------------------------------------')
 # ordenando o vetor em ordem alfabética
 frutas.sort()
 print(frutas)
+

@@ -54,3 +54,5 @@ def area_forma(base, altura, forma = "R"):
     print(f"Elipse 15x15: {area_forma(15, 15, 'E')}")
     print(f"Retangulo 9.5x9: {area_forma(9.5, 9.5)}")
 
+    
+

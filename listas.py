@@ -44,3 +44,4 @@ print(primos[2:8])
 sub_primos = primos[1:5]
 print(sub_primos)
 
+

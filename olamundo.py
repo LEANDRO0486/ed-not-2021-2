@@ -16,6 +16,8 @@ else:
     print('Você não pode beber.')
     print('Você não pode tirar habilitação.')
 
+    
+
 
 
 
