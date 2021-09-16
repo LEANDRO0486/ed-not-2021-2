@@ -5,6 +5,8 @@
 # ingredientes (dados) e modos de fazer (algoritmo), mas
 # terão sempre o formato determinado pela "forma" (classe)
 
+from math import pi
+
 class FormaGeometrica():
     #Dados
     #quando pertencem a uma classe, ganham o nome de 
@@ -27,15 +29,15 @@ class FormaGeometrica():
         # Recebe os valores passados do construtor e os armazena
         # dentro dos atributos
 
-        print(f"base: {base} ({type(base)}), altura: {altura} ({type(altura)}")
+        #print(f"base: {base} ({type(base)}), altura: {altura} ({type(altura)}")
 
 
-        if type(base) not in [int,float] or base <= 0:
-            raise Exception("A base deve ser maior que zero.")
-        elif type(altura) not in [int,float] or altura <= 0:
-            raise Exception("A altura deve ser maior que zero.")
-        elif tipo not in ["R","T","E"]:
-            raise Exception("O tipo deve ser R, T, ou E")
+        # if type(base) not in [int,float] or base <= 0:
+        #     raise Exception("A base deve ser maior que zero.")
+        # elif type(altura) not in [int,float] or altura <= 0:
+        #     raise Exception("A altura deve ser maior que zero.")
+        # elif tipo not in ["R","T","E"]:
+        #     raise Exception("O tipo deve ser R, T, ou E")
 
         # ajustando o valor dos atributos privados
         self.__base = base
@@ -73,7 +75,27 @@ class FormaGeometrica():
     def altura(self, valor):  # Settrer para propriedade chamada "altura"  
         if type(valor) not in [int, float] or valor <= 0:
             raise Exception('* altura deve ser numérica e maior que zero')
-        self.__altura = valor         
+        self.__altura = valor 
+
+    @property
+    def altura(self, valor):
+        return self.__tipo
+
+    @tipo.Setter
+    def tipo(self, valor):
+        if valor not in ["R","T","E"]:
+            raise Exception("*O tipo deve ser R, T, ou E")
+        self.__tipo = valor  
+
+# Um metodo é uma função que, inserido dentro de uma classe, pode
+# acessar seus dados (ATRIBUTOS) e manipula-los 
+    def cal_area(self):
+        if self.tipo =="R":   #retamgulo
+            return self.base * self.altura
+        elif self.tipo =="T": #triangulo
+            return self.base * self.altura / 2
+        else: # elipse
+            return (self.base / 2) * (self.altuta) * pi      
 
 ###########################################################
 
@@ -81,6 +103,8 @@ class FormaGeometrica():
 
 retangulo1 = FormaGeometrica(15, 10, "R") # Chama o __init__
 triangulo1 = FormaGeometrica(6, 9, "T")
+
+print(f"Area de uma forma {retangulo1.tipo} de {retangulo1.base}x{retangulo1.altura}: {retangulo1.cal_area()}")
 
 #retangulo1.__base = 5
 #retangulo1.set_base(9.6)
